@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index,follow">
+<meta name="description" content="Information about BETPILOT BUCO NERO, a personal Google Drive archive automation.">
+<title>BETPILOT BUCO NERO — BETPILOT BUCO NERO</title>
+<style>
+:root{color-scheme:dark;--bg:#0b1118;--panel:#14202a;--ink:#f5f4ef;--muted:#b9c6cd;--gold:#e9c58b;--line:#33414b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:790px;margin:0 auto;padding:clamp(28px,6vw,68px) 22px 80px}
+nav{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:65px;font-size:.94rem}a{color:var(--gold);text-underline-offset:4px}a:hover{color:#ffe2b8}
+.brand{font-size:.76rem;letter-spacing:.23em;font-weight:700;text-transform:uppercase;color:var(--gold)}h1{font-size:clamp(2.2rem,6vw,3.6rem);line-height:1.1;margin:17px 0 21px;letter-spacing:-.045em}h2{font-size:1.15rem;margin-top:33px;line-height:1.3}
+p,li{color:var(--muted)}p.lede{font-size:1.16rem;max-width:650px;color:#dce6e8}.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:24px;margin:33px 0}
+.card p:first-of-type{margin-top:0}.note{border-left:3px solid var(--gold);padding:10px 0 10px 18px;margin:30px 0;color:#dce6e8}
+footer{border-top:1px solid var(--line);padding-top:25px;margin-top:60px;font-size:.84rem;color:var(--muted)}ul{padding-left:22px}li{margin-bottom:8px}
+</style>
+</head>
+<body>
+<main>
+<nav aria-label="Main navigation"><a href="/">Home</a><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms</a></nav>
+<p class="brand">BETPILOT / Research infrastructure</p>
+<h1>BETPILOT BUCO NERO</h1>
+<p class="lede">A private, personal-use automation for collecting and maintaining a time-series database of football match observations.</p>
+
+<div class="card"><h2>What the project does</h2><p>BETPILOT BUCO NERO collects football match exports, including event timestamps, match statistics and pre-match/live market data, and organizes them into a versioned research database.</p><p>The pipeline transfers exported ZIP and CSV files to the operator’s Google Drive, verifies the data, reconstructs match timelines and stores successive SQLite database versions. GitHub Actions runs controlled checks and publication tasks.</p></div>
+<h2>Why Google Drive access is requested</h2>
+<p>Google Drive is the operator’s archive for source exports and database versions. The OAuth connection used by rclone currently requests <strong>full Drive access</strong> (<code>https://www.googleapis.com/auth/drive</code>), although the intended workflows operate only on designated BETPILOT folders. This permission technically allows the application to view, create, modify and delete other Drive files; the operator should therefore keep its credentials protected and review this permission periodically.</p>
+<h2>Who can use it?</h2><p>This integration is currently intended exclusively for the project operator’s own Google account. This site is informational: it has no account registration, does not provide public Google sign-in, and does not offer access to the research database.</p>
+<p class="note">For details of data access, storage, sharing, and deletion, read the <a href="/privacy.html">Privacy Policy</a>. You can also review the <a href="/terms.html">Terms</a>.</p>
+<h2>Affiliations</h2><p>BETPILOT BUCO NERO is an independent research/automation project. It is not endorsed by or affiliated with Google, GitHub, LivePick, or any bookmaker.</p>
+
+<footer>BETPILOT BUCO NERO · Personal-use project · Last updated October 25, 2026<br>Project contact: <a href="https://github.com/jscommessinho">GitHub profile of the operator</a>. This informational website is public; the research database and GitHub automation repository are private.</footer>
+</main>
+</body>
+</html>
